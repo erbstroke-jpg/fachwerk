@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Colors ───────────────────────────── */
+  --color-primary:          #00332a;
+  --color-primary-hover:    #1b4a40;
+  --color-forest:           #1b4a40;
+  --color-secondary:        #735a3a;
+  --color-timber-oak:       #a68966;
+  --color-surface:          #fcf9f8;
+  --color-earth-sand:       #f4f1ea;
+  --color-snow-peak:        #ffffff;
+  --color-on-surface:       #1b1c1c;
+  --color-on-surface-var:   #404846;
+  --color-outline:          #707976;
+  --color-outline-var:      #c0c8c4;
+  --color-error:            #ba1a1a;
+  --color-status-confirmed: #1b4a40;
+  --color-status-pending:   #b8860b;
+  --color-status-blocked:   #707976;
+
+  /* ── Fonts ────────────────────────────── */
+  --font-serif: var(--font-playfair), Georgia, serif;
+  --font-sans:  var(--font-montserrat), system-ui, sans-serif;
+
+  /* ── Font sizes ───────────────────────── */
+  --text-display-lg:  3.25rem;
+  --text-display-mob: 2.25rem;
+  --text-headline-md: 2rem;
+  --text-headline-sm: 1.5rem;
+  --text-body-lg:     1.125rem;
+  --text-body-md:     1rem;
+
+  /* ── Spacing ──────────────────────────── */
+  --spacing-section:   7.5rem;
+  --spacing-section-m: 4rem;
+
+  /* ── Border radius (sharp corners) ────── */
+  --radius-sm:  0px;
+  --radius:     0px;
+  --radius-md:  0px;
+  --radius-lg:  0px;
+  --radius-xl:  0px;
+  --radius-2xl: 0px;
+  --radius-3xl: 0px;
+}
+
+/* Element defaults (NOT a * reset — that would override Tailwind utilities) */
+body {
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  background-color: #fcf9f8;
+  color: #1b1c1c;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, h4 { font-family: var(--font-playfair), Georgia, serif; }
+html { scroll-behavior: smooth; }
+:focus-visible { outline: 2px solid #1b4a40; outline-offset: 2px; }
+
+/* ── react-day-picker v9 theming ── */
+.rdp-root {
+  --rdp-accent-color: #00332a;
+  --rdp-accent-background-color: rgba(27,74,64,0.10);
+  --rdp-day-width: 40px;
+  --rdp-day-height: 40px;
+  --rdp-day_button-width: 40px;
+  --rdp-day_button-height: 40px;
+  --rdp-font-family: var(--font-montserrat), sans-serif;
+  font-size: 14px;
+}
+.rdp-month_caption { font-family: "Playfair Display", serif; font-size: 16px; text-transform: capitalize; padding: 0 0 8px; }
+.rdp-weekday { color: #707976; font-weight: 600; font-size: 11px; text-transform: uppercase; }
+.rdp-day_button { border-radius: 0; }
+.rdp-selected .rdp-day_button,
+.rdp-range_start .rdp-day_button,
+.rdp-range_end .rdp-day_button { background: #00332a !important; color: #fff !important; border: none; }
+.rdp-range_middle .rdp-day_button { background: rgba(27,74,64,0.10) !important; color: #1b1c1c !important; }
+.rdp-disabled { opacity: 0.35; text-decoration: line-through; }
+.rdp-today:not(.rdp-selected) .rdp-day_button { color: #1b4a40; font-weight: 700; }
+
+/* ── Loading screen: draw outline, then fill ── */
+@keyframes logoDraw { to { stroke-dashoffset: 0; } }
+@keyframes logoFill { to { fill-opacity: 1; } }
+
+.loader-path {
+  fill: #ffffff;
+  fill-opacity: 0;
+  /* stroke: #ffffff; */
+  stroke-width: 1.4;
+  vector-effect: non-scaling-stroke;   /* стабильная толщина при огромном viewBox */
+  stroke-dasharray: 1;                 /* работает за счёт pathLength="1" на каждом path */
+  stroke-dashoffset: 1;
+  animation:
+    logoDraw 1.5s cubic-bezier(0.65, 0, 0.35, 1) forwards,
+    logoFill 0.7s ease-out forwards 1.25s;
+}

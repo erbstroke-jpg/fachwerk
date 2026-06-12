@@ -1,0 +1,90 @@
+{
+  "nav": {
+    "about": "About",
+    "interiors": "Interiors",
+    "location": "Location",
+    "contacts": "Contacts",
+    "book": "Book now"
+  },
+  "hero": {
+    "headline": "Fachwerk is more than just a place to relax. It's your personal haven of comfort, created for those who value aesthetics, privacy, and impeccable service.",
+    "subheadline": "An exclusive Fachwerk villa in the heart of Kyrgyzstan's nature",
+    "checkin": "Check-in",
+    "checkout": "Check-out",
+    "guests": "Guests",
+    "guestsUnit": "adults",
+    "search": "Search",
+    "selectDate": "Select a date"
+  },
+  "about": {
+    "eyebrow": "about the villa",
+    "headline": "Modern Fachwerk",
+    "body": "Fachwerk A space created with your health and harmony in mind. Fachwerk villas offer a modern take on sustainable architecture and premium comfort. Completely eco-friendly. Only natural wood and safe materials are used. The house «breathes», creating a healthy and clean microclimate for your family Energy-efficient technologies ensure the villa maintains a perfect balance: warm in winter and cool in summer. Your perfect vacation in harmony with nature.",
+    "eco": "Eco Materials",
+    "ecoDesc": "Only natural timber and safe finishes",
+    "panorama": "Panoramas",
+    "panoramaDesc": "Lake and mountain views from every room",
+    "body2": "Let nature take care of your mood: picturesque lake views and the quiet rustling of the trees will bring you long-awaited peace of mind. The villa's space is perfect for beautiful evenings with family and warm gatherings with friends. It's so easy to be alone with your thoughts, recharge, and simply enjoy the moment."
+  },
+  "interiors": {
+    "eyebrow": "Accommodation",
+    "headline": "Villa Spaces",
+    "subheadline": "Two spacious floors crafted down to every detail"
+  },
+  "location": {
+    "eyebrow": "How to get there",
+    "headline": "Find us on the map",
+    "address": "Bosteri, Kojomberdiyeva 6a/25, cottage Ch-13 (Alma-Ata Hotel territory)",
+    "buildRoute": "Get directions",
+    "airports": "Distance to airports",
+    "km": "km",
+    "min": "min",
+    "navigatorHint": "Pick your preferred navigator to build a route straight to our villa's gate."
+  },
+  "booking": {
+    "headline": "Booking",
+    "selectDates": "Select a date",
+    "guests": "Guests",
+    "adults": "Adults",
+    "children": "Children",
+    "name": "Name",
+    "phone": "Phone",
+    "arrivalTime": "Estimated arrival time",
+    "comment": "Comment",
+    "submit": "Book now",
+    "unavailable": "Selected dates are unavailable",
+    "success": "Request submitted!",
+    "successDesc": "Our manager will contact you to confirm.",
+    "closeConfirm": "Close without saving changes?",
+    "cottageHint": "Travelling in a big group? We also have a cosy cottage for up to 10 guests — happy to tell you more.",
+    "cottageLink": "Message us",
+    "maxGuests": "Maximum {max} guests"
+  },
+  "footer": {
+    "tagline": "A premium eco-villa for those who seek tranquillity and impeccable comfort.",
+    "menu": "Menu",
+    "info": "Information",
+    "privacy": "Privacy Policy",
+    "offer": "Terms & Conditions",
+    "payment": "Payment methods",
+    "copyright": "© Fachwerk IssykKul {year}. All rights reserved."
+  },
+  "admin": {
+    "login": "Login",
+    "email": "Email",
+    "password": "Password",
+    "loginBtn": "Sign in",
+    "bookings": "Bookings",
+    "calendar": "Calendar",
+    "newBooking": "New booking",
+    "block": "Block dates",
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "status": {
+      "pending": "Pending",
+      "confirmed": "Confirmed",
+      "cancelled": "Cancelled",
+      "blocked": "Blocked"
+    }
+  }
+}
