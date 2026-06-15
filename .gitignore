@@ -8,3 +8,8 @@ nginx/certbot/
 *.egg-info/
 dist/
 .venv/
+# Ignore JetBrains IDE project settings
+.idea/
+*.iws
+*.iml
+*.ipr

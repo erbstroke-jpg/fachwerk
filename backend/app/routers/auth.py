@@ -61,7 +61,7 @@ def login(data: LoginRequest, response: Response, db: Session = Depends(get_db))
         key=COOKIE_NAME,
         value=token,
         httponly=True,
-        secure=True,
+        secure=settings.cookie_secure,
         samesite="lax",
         max_age=settings.jwt_expire_minutes * 60,
     )

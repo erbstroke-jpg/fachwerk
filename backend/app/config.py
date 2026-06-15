@@ -10,6 +10,11 @@ class Settings(BaseSettings):
     jwt_secret: str = "dev-secret-change-in-prod"
     jwt_expire_minutes: int = 1440
 
+    # Auth cookie. Must be False when serving over plain HTTP (no domain/TLS),
+    # otherwise the browser drops the Secure cookie and admin login silently fails.
+    # Set to True once you put the site behind HTTPS.
+    cookie_secure: bool = True
+
     # Admin
     admin_email: str = "admin@fachwerk.kg"
     admin_password: str = "admin"
