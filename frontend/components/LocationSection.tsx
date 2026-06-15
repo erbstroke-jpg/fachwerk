@@ -115,7 +115,7 @@ export function LocationSection({ locale }: Props) {
               )} */}
             {/* </div> */}
 
-            <div className="w-full h-[320px] rounded-[6px] overflow-hidden" style={{ backgroundImage: "url('/images/map.jpeg')", backgroundSize:'cover' }} />
+            <div className="w-full h-[320px] rounded-[6px] overflow-hidden" style={{ backgroundImage: "url('/images/map.jpeg')", backgroundSize:'cover', backgroundPositionX:'45%' }} />
 
             {/* Right text + buttons */}
             <div>

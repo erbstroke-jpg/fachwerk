@@ -90,8 +90,8 @@ export default function AdminCalendar() {
 
   return (
     <div className="p-8">
-      <div className="flex items-center justify-between mb-8">
-        <h1 className="font-serif text-[28px] text-on-surface" style={{ fontFamily: "var(--font-playfair), serif" }}>
+      <div className="flex gap-2 items-center justify-between mb-8">
+        <h1 className="font-serif text-[22px] md:text-[28px] text-on-surface" style={{ fontFamily: "var(--font-playfair), serif" }}>
           Календарь
         </h1>
         <div className="flex items-center gap-4">
@@ -110,7 +110,7 @@ export default function AdminCalendar() {
               className="w-9 h-9 border border-outline flex items-center justify-center hover:bg-earth-sand transition-colors">
               ←
             </button>
-            <span className="font-serif text-[18px] text-on-surface min-w-[160px] text-center"
+            <span className="font-serif text-[18px] text-on-surface md:min-w-[160px] text-center"
               style={{ fontFamily: "var(--font-playfair), serif" }}>
               {MONTHS_RU[month - 1]} {year}
             </span>

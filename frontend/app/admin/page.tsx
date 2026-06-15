@@ -62,12 +62,12 @@ export default function AdminBookings() {
   }
 
   return (
-    <div className="p-8">
-      <div className="flex items-center justify-between mb-8">
+    <div className="p-8 flex flex-col  items-center">
+      <div className="flex items-center flex-col  justify-between mb-8">
         <h1 className="font-serif text-[28px] text-on-surface" style={{ fontFamily: "var(--font-playfair), serif" }}>
           Брони
         </h1>
-        <div className="flex gap-2">
+        <div className="flex mt-3 flex-wrap gap-2">
           {["", "pending", "confirmed", "cancelled", "blocked"].map((s) => (
             <button key={s} onClick={() => setFilter(s)}
               className={`px-4 py-2 text-[12px] font-bold tracking-wide uppercase border transition-colors ${
