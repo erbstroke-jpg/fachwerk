@@ -23,8 +23,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       })
       .catch((err) => {
         console.error("Auth error:", err);
-        // Если вы удаленно тестируете, пока не редиректим жестко, чтобы не сломать сессию ngrok
-        // router.push("/admin/login");
+        router.push("/admin/login");
       });
   }, []);
 
