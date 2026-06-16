@@ -47,7 +47,7 @@ app = FastAPI(title="Fachwerk IssykKul API", version="1.0.0", lifespan=lifespan)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://yourdomain.kg", "http://localhost:3000"],
+    allow_origins=["https://fachwerk.live", "http://localhost:3000"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
