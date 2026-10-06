@@ -12,6 +12,11 @@ router = APIRouter(prefix="/api/webhook", tags=["webhook"])
 @router.post("/telegram")
 async def telegram_webhook(request: Request):
     """Receive callback_query from Telegram when owner presses a button."""
+    if not settings.telegram_webhook_secret:
+        raise HTTPException(status_code=503, detail="Webhook secret not configured")
+    if request.headers.get("X-Telegram-Bot-Api-Secret-Token") != settings.telegram_webhook_secret:
+        raise HTTPException(status_code=403, detail="Forbidden")
+
     data = await request.json()
 
     # Only handle callback_query (button presses)

@@ -23,6 +23,9 @@ class Settings(BaseSettings):
     telegram_bot_token: str = "PENDING"
     telegram_owner_chat_id: str = "PENDING"
     telegram_webhook_url: str = "PENDING"  # e.g. https://yourdomain.kg/api/webhook/telegram
+    # Telegram sends it back in X-Telegram-Bot-Api-Secret-Token; without it anyone can
+    # POST to the webhook and confirm/cancel bookings. openssl rand -hex 32
+    telegram_webhook_secret: str = ""
 
     # Villa
     villa_price_per_night: int = 25000

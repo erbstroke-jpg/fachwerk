@@ -32,11 +32,14 @@ async def lifespan(app: FastAPI):
     # Register Telegram webhook if configured
     if (settings.telegram_bot_token != "PENDING"
             and settings.telegram_webhook_url != "PENDING"):
+        payload = {"url": settings.telegram_webhook_url,
+                   "allowed_updates": ["callback_query"]}
+        if settings.telegram_webhook_secret:
+            payload["secret_token"] = settings.telegram_webhook_secret
         async with httpx.AsyncClient(timeout=10) as client:
             await client.post(
                 f"https://api.telegram.org/bot{settings.telegram_bot_token}/setWebhook",
-                json={"url": settings.telegram_webhook_url,
-                      "allowed_updates": ["callback_query"]}
+                json=payload
             )
 
     yield
